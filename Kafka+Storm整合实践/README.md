@@ -1,5 +1,7 @@
-#Kafka+StormÕûºÏ
+#Kafka+Stormæ•´åˆ
 
-producer£ºKafkaÉú²úÕß£¬¸ºÔðÏòKafkaÊäÈëÊý¾ÝÁ÷
-bolt£º¼òµ¥Æð¼û£¬ÔÚStormÖÐ¸ºÔðÊä³öKafkaÊäÈëµÄÊý¾Ý
-topology£ºStormÔËÐÐµÄÍØÆË£¬ÆäÖÐSpoutÎªKafka-StormÕûºÏ°üÌá¹©µÄKafkaSpoutÀà£¬Í¨¹ýSpoutConfigÅäÖÃÆäÐÅÏ¢
+producerï¼šKafkaç”Ÿäº§è€…ï¼Œè´Ÿè´£å‘Kafkaè¾“å…¥æ•°æ®æµ
+
+boltï¼šç®€å•èµ·è§ï¼Œåœ¨Stormä¸­è´Ÿè´£è¾“å‡ºKafkaè¾“å…¥çš„æ•°æ®
+
+topologyï¼šStormè¿è¡Œçš„æ‹“æ‰‘ï¼Œå…¶ä¸­Spoutä¸ºKafka-Stormæ•´åˆåŒ…æä¾›çš„KafkaSpoutç±»ï¼Œé€šè¿‡SpoutConfigé…ç½®å…¶ä¿¡æ¯
