@@ -1,12 +1,16 @@
-Flume+Kafka+Storm+HBase¼¯³É
-´úÂëÔÚintegrationÎÄ¼ş¼ĞÏÂ
+Flume+Kafka+Storm+HBaseé›†æˆ
+
+ä»£ç åœ¨integrationæ–‡ä»¶å¤¹ä¸‹
+
 #Flume
-ÏêÏ¸ÅäÖÃ¼ûFlumeÅäÖÃÎÄ¼ş¼ĞÏÂµÄintegration.properties
-²ÉÓÃFlumeÌá¹©µÄRpcClientÏòFlume·¢ËÍÏûÏ¢
+
+è¯¦ç»†é…ç½®è§Flumeé…ç½®æ–‡ä»¶å¤¹ä¸‹çš„integration.properties
+
+é‡‡ç”¨Flumeæä¾›çš„RpcClientå‘Flumeå‘é€æ¶ˆæ¯
 
 
 #Kafka
-´´½¨KafkaÖ÷Ìâ²¢²é¿´Ö÷ÌâĞÅÏ¢
+åˆ›å»ºKafkaä¸»é¢˜å¹¶æŸ¥çœ‹ä¸»é¢˜ä¿¡æ¯
 [root@master kafka]# bin/kafka-topics.sh --create --zookeeper master:2181,slave1:2181,slave2:2181 --topic integration --partitions 2 --replication-factor 2
 Created topic "integration".
 [root@master kafka]# bin/kafka-topics.sh --describe --zookeeper master:2181,slave1:2181,slave2:2181 --topic integration
@@ -14,12 +18,14 @@ Topic:integration       PartitionCount:2        ReplicationFactor:2     Configs:
         Topic: integration      Partition: 0    Leader: 1       Replicas: 1,0   Isr: 1,0
         Topic: integration      Partition: 1    Leader: 0       Replicas: 0,1   Isr: 0,1
 
+
 #Storm
-Spout²ÉÓÃKafkaSpout
-ÔÚBoltÖĞÏòHBase±íÖĞ²åÈëÊı¾İ
+Spouté‡‡ç”¨KafkaSpout
+åœ¨Boltä¸­å‘HBaseè¡¨ä¸­æ’å…¥æ•°æ®
+
 
 #HBase		
-ÊÂÏÈ´´½¨±í ¡°storm_table","fksh"
+äº‹å…ˆåˆ›å»ºè¡¨ â€œstorm_table","fksh"
 hbase(main):002:0> create "storm_table","fksh"
 0 row(s) in 2.5670 seconds
 
@@ -40,7 +46,8 @@ PRESSION => 'NONE', MIN_VERSIONS => '0', BLOCKCACHE => 'true', BLOCKSIZE => '655
 1 row(s) in 0.2850 seconds
 
 
-Storm³ÌĞòÔËĞĞºó£º
+
+Stormç¨‹åºè¿è¡Œåï¼š
 hbase(main):017:0> count "storm_table"
 Current count: 1000, row: 22911584-4deb-4521-b7ac-f4d0814ba3e2                                                                                                   
 Current count: 2000, row: 45d5bd1b-5b13-4eae-a2dc-08025d007ebc                                                                                                   
