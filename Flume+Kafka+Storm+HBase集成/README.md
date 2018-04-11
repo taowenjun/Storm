@@ -1,7 +1,7 @@
 Flume+Kafka+Storm+HBase集成
-
+代码在integration文件夹下
 #Flume
-详细配置见integration.properties
+详细配置见Flume配置文件夹下的integration.properties
 采用Flume提供的RpcClient向Flume发送消息
 
 
